@@ -3,6 +3,8 @@
 
 Gather data from "[RuuviTag](https://ruuvi.com/)" bluetooth beacon and send data to "[Paessler PRTG Network Monitor Server](https://www.paessler.com/prtg)". You can use RuuviTag to monitor server room temperature, humidity and pressure. You can put RuuviTag outside or strap it to the room door to detect its movement i.e. someone is entering server room. You can lock RuuviTag inside bicycle outside and setup PRTG server to send SMS (BulkSMS) message as soon as it moves :).
 
+Note: Project use [windows-beacon-library](https://github.com/AltBeacon/windows-beacon-library) by [davidgyoung](https://github.com/AltBeacon/windows-beacon-library/commits?author=davidgyoung)
+
 RuuviTag:
 
 ![RuuviTag](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/RuuviTag.jpg?raw=true "RuuviTag")
