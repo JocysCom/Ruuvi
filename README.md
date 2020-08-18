@@ -5,7 +5,7 @@ Gather data from "[RuuviTag](https://ruuvi.com/)" bluetooth beacon and send data
 
 This project is using [windows-beacon-library](https://github.com/AltBeacon/windows-beacon-library) by [davidgyoung](https://github.com/AltBeacon/windows-beacon-library/commits?author=davidgyoung)
 
-In this project, I was using "Mpow Bluetooth 5.0 USB Adapter for PC" to read from RuuviTag beacon.
+I've used "Mpow Bluetooth 5.0 USB Adapter for PC" to read data from RuuviTag beacon.
 
 RuuviTag:
 
