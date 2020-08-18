@@ -1,5 +1,6 @@
-# Ruuvi to PRTG
-Server which gathers data from RuuviTag beacon bluetooth and sends data to PRTG server.
+# Ruuvi PRTG Server
+
+Server which gathers data from RuuviTag bluetooth beacon and sends data to PRTG Server. You can use RuuviTag to monitor server room temperature, humidity and pressure. You can put RuuviTag outside or strap it to the room door to detect its movement i.e. someone is entering server room. You can lock RuuviTag inside bicycle outside and setup PRTG server to send SMS (BulkSMS) message as soon as it moves :).
 
 ![Ruuvi PRTG View](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor.png?raw=true "Ruuvi PRTG View")
 
