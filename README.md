@@ -35,4 +35,4 @@ You can install "Jocys.com Ruuvi PRTG Server" as Windows service:
 
 or run Jocyscom.Ruuvi.PRTG.Server.exe as Console Application:
 
-![Ruuvi PRTG Console](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_Server_as_Console.png "Ruuvi PRTG Console")
+![Ruuvi PRTG Console](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_Server_Console.png "Ruuvi PRTG Console")
