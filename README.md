@@ -9,7 +9,7 @@ Gather data from "[RuuviTag](https://ruuvi.com/)" bluetooth beacon and send data
 
 PRTG Sensor data from RuuviTag:
 
-![Ruuvi PRTG View](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensors.png?raw=true "Ruuvi PRTG View")
+![Ruuvi PRTG View](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor.png?raw=true "Ruuvi PRTG View")
 
 ## Configuration
 
