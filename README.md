@@ -3,9 +3,7 @@
 
 Gather data from "[RuuviTag](https://ruuvi.com/)" bluetooth beacon and send data to "[Paessler PRTG Network Monitor Server](https://www.paessler.com/prtg)". You can use RuuviTag to monitor server room temperature, humidity and pressure. You can put RuuviTag outside or strap it to the room door to detect its movement i.e. someone is entering server room. You can lock RuuviTag inside bicycle outside and setup PRTG server to send SMS (BulkSMS) message as soon as it moves :).
 
-I've used "Mpow Bluetooth 5.0 USB Adapter for PC" to read data from RuuviTag beacon.
-
-RuuviTag Beacon and Bluetooth 5.0 USB Dongle:
+## RuuviTag Beacon and Bluetooth 5.0 USB Dongle:
 
 ![RuuviTag](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/RuuviTag.jpg?raw=true "RuuviTag") ![Bluetooth 5.0](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/MPow_BT50.png?raw=true "Bluetooth 5.0")
 
@@ -13,7 +11,7 @@ PRTG Sensor data from RuuviTag:
 
 ![Ruuvi PRTG View](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor.png?raw=true "Ruuvi PRTG View")
 
-# Configuration
+## Configuration
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -27,7 +25,7 @@ PRTG Sensor data from RuuviTag:
 </configuration>
 ```
 
-# Service and Console
+## Service and Console
 
 You can install "Jocys.com Ruuvi PRTG Server" as Windows service:
 
