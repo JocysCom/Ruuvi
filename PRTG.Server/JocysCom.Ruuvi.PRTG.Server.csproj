@@ -62,15 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BeaconLibrary\Beacon.cs" />
-    <Compile Include="BeaconLibrary\BeaconParser.cs" />
-    <Compile Include="BeaconLibrary\BeaconTracker.cs" />
-    <Compile Include="BeaconLibrary\BeaconTransmitter.cs" />
-    <Compile Include="BeaconLibrary\BluetoothDevice.cs" />
-    <Compile Include="BeaconLibrary\Identifier.cs" />
-    <Compile Include="BeaconLibrary\Logger.cs" />
-    <Compile Include="BeaconLibrary\Region.cs" />
-    <Compile Include="BeaconLibrary\RssiTracker.cs" />
     <Compile Include="Common\AppHelper.cs" />
     <Compile Include="Common\PrtgData.cs" />
     <Compile Include="Common\RuuviData.cs" />
