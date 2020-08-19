@@ -35,6 +35,7 @@ namespace JocysCom.Ruuvi.PRTG.Server
 				RuuviPrtgMaps.Add(ruuviMac, ruuviUrl);
 				Console.WriteLine("RUUVI {0} -> {1}", ruuviMac, ruuviUrl);
 			}
+			Console.WriteLine();
 			// Filter Ruuvi tags by manufaturer.
 			var manufacturerData = new BluetoothLEManufacturerData();
 			manufacturerData.CompanyId = RuuviCompanyId;
