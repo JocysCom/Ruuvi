@@ -5,9 +5,9 @@ Gather data from "[RuuviTag](https://ruuvi.com/)" bluetooth beacon and send data
 
 I've used "Mpow Bluetooth 5.0 USB Adapter for PC" to read data from RuuviTag beacon.
 
-RuuviTag:
+RuuviTag Beacon and Bluetooth 5.0 USB Dongle:
 
-![RuuviTag](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/RuuviTag.jpg?raw=true "RuuviTag")
+![RuuviTag](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/RuuviTag.jpg?raw=true "RuuviTag") ![Bluetooth 5.0](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/MPow_BT50.png?raw=true "Bluetooth 5.0")
 
 PRTG Sensor data from RuuviTag:
 
