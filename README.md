@@ -25,7 +25,7 @@ PRTG Sensor data from RuuviTag:
 </configuration>
 ```
 
-## Service and Console
+## Server and Console
 
 You can install "Jocys.com Ruuvi PRTG Server" as Windows service:
 
