@@ -37,7 +37,7 @@ namespace JocysCom.Ruuvi.PRTG.Server
 			}
 			// Filter Ruuvi tags by manufaturer.
 			var manufacturerData = new BluetoothLEManufacturerData();
-			manufacturerData.CompanyId = 0x0499;
+			manufacturerData.CompanyId = RuuviCompanyId;
 			Watcher.AdvertisementFilter.Advertisement.ManufacturerData.Add(manufacturerData);
 			Watcher.Received += Watcher_Received;
 			Watcher.Start();
@@ -45,6 +45,7 @@ namespace JocysCom.Ruuvi.PRTG.Server
 
 		private BluetoothLEAdvertisementWatcher Watcher = new BluetoothLEAdvertisementWatcher();
 
+		private const ushort RuuviCompanyId = 0x0499;
 		Dictionary<string, string> RuuviPrtgMaps = new Dictionary<string, string>();
 
 		private void Watcher_Received(BluetoothLEAdvertisementWatcher sender, BluetoothLEAdvertisementReceivedEventArgs args)
