@@ -1,7 +1,7 @@
 # Jocys.com Ruuvi PRTG Server
 
 
-Gather data from "[RuuviTag](https://ruuvi.com/)" bluetooth beacons and send data to "[Paessler PRTG Network Monitor Server](https://www.paessler.com/prtg)". You can use RuuviTag to monitor server room temperature, humidity and pressure. You can put RuuviTag outside or strap it to the room door to detect movement i.e. someone is entering server room. You can lock RuuviTag inside bicycle outside and setup PRTG server to send SMS (BulkSMS) message as soon as it moves :).
+Gather data from "[RuuviTag](https://ruuvi.com/)" bluetooth beacons and send data to "[Paessler PRTG Network Monitor Server](https://www.paessler.com/prtg)". You can use RuuviTag to monitor server room temperature, humidity and pressure. You can put RuuviTag outside or strap it to the room door to detect movement i.e. someone entering the room. You can lock RuuviTag inside bicycle outside and setup PRTG server to send SMS (BulkSMS) message as soon as it moves :).
 
 ## RuuviTag Beacon and Bluetooth 5.0 USB Dongle:
 
