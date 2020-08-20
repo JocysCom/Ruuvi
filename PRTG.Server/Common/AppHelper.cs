@@ -19,7 +19,7 @@ namespace JocysCom.Ruuvi.PRTG.Server
 				{
 					result = new result[]
 					{
-						 new result(nameof(RuuviData.Temperature), (float)data.Temperature, "C°", 2),
+						 new result(nameof(RuuviData.Temperature), (float)data.Temperature, "°C", 2),
 						 new result(nameof(RuuviData.Humidity), (float)data.Humidity, "%", 2),
 						 new result(nameof(RuuviData.Pressure), (float)data.Pressure, "Pa"),
 						 new result(nameof(RuuviData.AccelerationX), (float)data.AccelerationX, "m/s²"),

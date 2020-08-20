@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Text;
 using Windows.Devices.Bluetooth.Advertisement;
@@ -27,7 +28,7 @@ namespace JocysCom.Ruuvi.PRTG.Server
 		public void InitStart()
 		{
 			var prefix = "Ruuvi_";
-			var ruuviKeys = ConfigurationManager.AppSettings.AllKeys.Where(x=>x.StartsWith(prefix)).ToList();
+			var ruuviKeys = ConfigurationManager.AppSettings.AllKeys.Where(x => x.StartsWith(prefix)).ToList();
 			foreach (var key in ruuviKeys)
 			{
 				var ruuviMac = key.Substring(prefix.Length);
@@ -62,7 +63,8 @@ namespace JocysCom.Ruuvi.PRTG.Server
 					return;
 				var ruuviUrl = new Uri(RuuviPrtgMaps[ruuviMac]);
 				RuuviData data = null;
-				Console.WriteLine("Address: {0}, Advertisement Type: {1}", ruuviMac, args.AdvertisementType);
+				Console.WriteLine();
+				//Console.WriteLine("Address: {0}, Advertisement Type: {1}", ruuviMac, args.AdvertisementType);
 				for (int i = 0; i < args.Advertisement.ManufacturerData.Count; i++)
 				{
 					var md = args.Advertisement.ManufacturerData[i];
@@ -103,21 +105,18 @@ namespace JocysCom.Ruuvi.PRTG.Server
 				{
 					data.RawSignalStrengthInDBm = args.RawSignalStrengthInDBm;
 					var sb = new StringBuilder();
-					sb.AppendFormat("  Manufacturer: 0x{0:X4}\r\n", data.Manufacturer);
-					sb.AppendFormat("  DataFormat: {0}\r\n", data.DataFormat);
-					sb.AppendFormat("  Temperature: {0} C°\r\n", data.Temperature);
-					sb.AppendFormat("  Humidity: {0} %\r\n", data.Humidity);
-					sb.AppendFormat("  Pressure: {0} Pa\r\n", data.Pressure);
-					sb.AppendFormat("  AccelerationX: {0} m/s²\r\n", data.AccelerationX);
-					sb.AppendFormat("  AccelerationY: {0} m/s²\r\n", data.AccelerationY);
-					sb.AppendFormat("  AccelerationZ: {0} m/s²\r\n", data.AccelerationZ);
-					sb.AppendFormat("  MovementCounter: {0}\r\n", data.MovementCounter);
-					sb.AppendFormat("  MeasurementSequence: {0}\r\n", data.MeasurementSequence);
-					//sb.AppendFormat("  MacAddress: {0}\r\n", data.MacAddress);
-					sb.AppendFormat("  MacAddress: {0}\r\n", data.MacAddressString);
-					sb.AppendFormat("  Voltage: {0} V\r\n", data.Voltage);
-					sb.AppendFormat("  Power: {0} dBm\r\n", data.Power);
-					sb.AppendFormat("  Signal: {0} dBm\r\n", data.RawSignalStrengthInDBm);
+					sb.AppendLine();
+					sb.AppendFormat("  Manufacturer: 0x{0:X4}, DataFormat: {1}, Sequence: {2}, MAC Address: {3}\r\n",
+						data.Manufacturer, data.DataFormat, data.MeasurementSequence, data.MacAddressString);
+					sb.AppendFormat("  Voltage: {0:0.000} V, Signal: {1} dBm, Power: {2} dBm, Movement Count: {3}\r\n",
+						data.Voltage, data.RawSignalStrengthInDBm, data.Power, data.MovementCounter);
+					sb.AppendLine();
+					sb.AppendFormat("  Temperature:    {0,8:0.00} °C\r\n", data.Temperature);
+					sb.AppendFormat("  Humidity:       {0,8:0.00} %\r\n", data.Humidity);
+					sb.AppendFormat("  Pressure:       {0,8:0.00} hPa\r\n", data.Pressure / 100m);
+					sb.AppendFormat("  Acceleration X: {0,8:0.00} m/s²\r\n", data.AccelerationX);
+					sb.AppendFormat("  Acceleration Y: {0,8:0.00} m/s²\r\n", data.AccelerationY);
+					sb.AppendFormat("  Acceleration Z: {0,8:0.00} m/s²\r\n", data.AccelerationZ);
 					Console.WriteLine(sb.ToString());
 				}
 				var identificationToken = new Guid("E1A4F3C2-D915-4323-B590-5EF55E9DA021");
