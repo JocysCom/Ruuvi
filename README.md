@@ -11,7 +11,7 @@ PRTG "[HTTP Push Data Advanced](https://www.paessler.com/manuals/prtg/http_push_
 
 ![Ruuvi PRTG View](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor.png?raw=true "Ruuvi PRTG View")
 
-PRTG Map, which includes 3 "[Sensor Factory](https://www.paessler.com/manuals/prtg/sensor_factory_sensor)" sensors, which shows data from channels of other sensors by using custom map object template:
+PRTG Map web page, which includes 3 "[Sensor Factory](https://www.paessler.com/manuals/prtg/sensor_factory_sensor)" sensors, which shows data from channels of other sensors by using custom map object template:
 
 ![Ruuvi PRTG View Custom](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor_Custom.png?raw=true "Ruuvi PRTG View Custom")
 
@@ -38,3 +38,9 @@ You can install "Jocys.com Ruuvi PRTG Server" as Windows service:
 ...or run as Console Application:
 
 ![Ruuvi PRTG Console](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Console.png "Ruuvi PRTG Console")
+
+You can display results on Windows tablet by using "[Jocys.com Web Screen Saver](https://github.com/JocysCom/WebScreenSaver)" project:
+
+![PRTG Map on a Tablet](http://www.jocys.com/Files/Software/Jocys.com_Web_Screen_Saver_Tablet_GitHub.jpg "PRTG Map on a Tablet")
+
+
