@@ -7,11 +7,11 @@ Gather data from "[RuuviTag](https://ruuvi.com/)" bluetooth beacons and send dat
 
 ![RuuviTag](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/RuuviTag.jpg?raw=true "RuuviTag") ![Bluetooth 5.0](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/MPow_BT50.png?raw=true "Bluetooth 5.0")
 
-PRTG "HTTP Push Data Advanced" sensor with multiple channels:
+PRTG "[HTTP Push Data Advanced](https://www.paessler.com/manuals/prtg/http_push_data_advanced_sensor)" sensor with multiple channels:
 
 ![Ruuvi PRTG View](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor.png?raw=true "Ruuvi PRTG View")
 
-PRTG Map, which includes 3 "Sensor Factory" sensors, which shows data from channels of other sensors by using custom map object template:
+PRTG Map, which includes 3 "[Sensor Factory](https://www.paessler.com/manuals/prtg/sensor_factory_sensor)" sensors, which shows data from channels of other sensors by using custom map object template:
 
 ![Ruuvi PRTG View Custom](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor_Custom.png?raw=true "Ruuvi PRTG View Custom")
 
