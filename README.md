@@ -11,7 +11,7 @@ PRTG "HTTP Push Data Advanced" sensor with multiple channels:
 
 ![Ruuvi PRTG View](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor.png?raw=true "Ruuvi PRTG View")
 
-PRTG Map with 3 "Sensor Factory" sensors, which shows data from channels of other sensors by using custom map object template:
+PRTG Map, which includes 3 "Sensor Factory" sensors, which shows data from channels of other sensors by using custom map object template:
 
 ![Ruuvi PRTG View Custom](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor_Custom.png?raw=true "Ruuvi PRTG View Custom")
 
