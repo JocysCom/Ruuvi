@@ -11,7 +11,7 @@ PRTG Sensor data from RuuviTag:
 
 ![Ruuvi PRTG View](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor.png?raw=true "Ruuvi PRTG View")
 
-PRTG Sensor data from RuuviTag with Custom PRTG Map Object:
+PRTG Sensor data from RuuviTag on PRTG Map:
 
 ![Ruuvi PRTG View Custom](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Sensor_Custom.png?raw=true "Ruuvi PRTG View Custom")
 
