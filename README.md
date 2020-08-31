@@ -39,7 +39,7 @@ You can install "Jocys.com Ruuvi PRTG Server" as Windows service:
 
 ![Ruuvi PRTG Console](https://github.com/JocysCom/Ruuvi/blob/master/PRTG.Server/Documents/Images/Ruuvi_PRTG_Console.png "Ruuvi PRTG Console")
 
-You can display results on Windows tablet by using "[Jocys.com Web Screen Saver](https://github.com/JocysCom/WebScreenSaver)" project:
+You can display PRTG Map web page results on Windows tablet by using "[Jocys.com Web Screen Saver](https://github.com/JocysCom/WebScreenSaver)" project:
 
 ![PRTG Map on a Tablet](http://www.jocys.com/Files/Software/Jocys.com_Web_Screen_Saver_Tablet_GitHub.jpg "PRTG Map on a Tablet")
 
