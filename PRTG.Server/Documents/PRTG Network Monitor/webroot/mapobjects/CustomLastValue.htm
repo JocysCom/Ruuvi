@@ -1,0 +1,17 @@
+<!--Status Icons: Custom Last Value-->
+<div class="map_object map_icon mapicon_status_white" id="<@itemid>" objectid="<@objectid>" subid="<@subid>" style="<#mapobject type="topleftcoordinates" subid="<@subid>" mode="<@editmode>">">
+  <#mapobject type="objectgrip" mode="<@editmode>">
+  <#mapobject type="htmlbefore" subid="<@subid>">
+  <style> 
+	@font-face { font-family: OCR_A_Regular; src: url(/css/fonts/ocraext.ttf); }
+  </style>
+	<div style="padding: 4px; border: solid 1px black;">
+	<div style="padding-bottom: 4px; font-family: OCR_A_Regular, Arial; font-size: 18pt; text-align: center;">
+	<span class="label"><#objectproperty name="Name" id="<@objectid>"></span>
+	</div>
+	<div style="padding: 4px; border-top: solid 1px black; font-family: OCR_A_Regular, Arial; font-size: 32pt; text-align: center;">
+    <span class="label"><#objectstatus name="lastvalue" id="<@objectid>"></span>
+	</div>
+	</div>
+  <#mapobject type="htmlafter" subid="<@subid>">
+</div>
