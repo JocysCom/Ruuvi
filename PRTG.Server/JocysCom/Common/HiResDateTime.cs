@@ -1,4 +1,7 @@
-﻿using System;
+﻿#if NETCOREAPP // .NET Core
+#elif NETSTANDARD // .NET Standard
+#else // .NET Framework
+using System;
 using System.Diagnostics;
 
 namespace JocysCom.ClassLibrary
@@ -50,7 +53,7 @@ namespace JocysCom.ClassLibrary
 					var now = DateTime.UtcNow;
 					TimeSpan elapsed;
 					// If values are not set yet then...
-					if (_stopWatch == null)
+					if (_stopWatch is null)
 					{
 						elapsed = new TimeSpan();
 						_stopWatch = Stopwatch.StartNew();
@@ -83,7 +86,7 @@ namespace JocysCom.ClassLibrary
 
 		void CheckReset()
 		{
-			if (_stopWatch == null) return;
+			if (_stopWatch is null) return;
 			// Get current system time.
 			var now = DateTime.UtcNow;
 			// Get current hi resolution time.
@@ -114,3 +117,4 @@ namespace JocysCom.ClassLibrary
 
 	}
 }
+#endif
