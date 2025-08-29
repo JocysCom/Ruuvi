@@ -124,7 +124,7 @@ namespace JocysCom.Ruuvi.PRTG.Server
 				Console.WriteLine("PRTG URL: " + ruuviUrl);
 				var status = AppHelper.MakeGetRequest(ruuviUrl, identificationToken, pd);
 				Console.WriteLine("PRTG GET Status: " + status);
-
+				Console.WriteLine();
 			}
 			catch (Exception ex)
 			{

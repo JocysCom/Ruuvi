@@ -6,12 +6,12 @@
 		public prtg prtg { get; set; }
 	}
 
-	public class prtg
+	public class @prtg
 	{
 		public result[] result { get; set; }
 	}
 
-	public class result
+	public class @result
 	{
 		public result() { }
 

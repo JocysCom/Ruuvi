@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Text;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace JocysCom.Ruuvi.PRTG.Server
 {
@@ -37,27 +38,28 @@ namespace JocysCom.Ruuvi.PRTG.Server
 		{
 			var dataString = SerializeToJson(data);
 			var url = prtgUrl.AbsoluteUri + "?content=" + System.Net.WebUtility.UrlEncode(dataString);
-			return MakeGetRequest(url.ToString());
+			return MakeGetRequest(new Uri(url));
 		}
 
-		public static string MakeGetRequest(string requestUriString)
+		// Use a single static HttpClient to avoid socket exhaustion and to replace obsolete WebRequest usage.
+		static readonly HttpClient _httpClient = new System.Net.Http.HttpClient();
+
+		public static string MakeGetRequest(Uri requestUri)
 		{
-			string status = null;
 			try
 			{
-				var request = WebRequest.Create(requestUriString);
-				var response = (HttpWebResponse)request.GetResponse();
+				// Await the asynchronous operation and get the response.
+				var response = _httpClient.GetAsync(requestUri).ConfigureAwait(false).GetAwaiter().GetResult();
 				var code = (int)response.StatusCode;
-				var description = response.StatusDescription;
-				response.Close();
-				status = string.Format("{0} - {1}", code, description);
-				response.Close();
+				var description = response.ReasonPhrase;
+				return string.Format("{0} - {1}", code, description);
 			}
 			catch (Exception ex)
 			{
-				status = ex.Message;
+				if (ex.InnerException != null)
+					return ex.InnerException.Message;
+				return ex.Message;
 			}
-			return status;
 		}
 
 

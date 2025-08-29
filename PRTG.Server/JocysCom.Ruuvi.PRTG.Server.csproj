@@ -1,99 +1,97 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
-    <OutputType>Exe</OutputType>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-	  <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-	  <Copyright>Jocys.com</Copyright>
-	  <Company>Jocys.com</Company>
-	  <Authors>Jocys.com Team</Authors>
-	  <AssemblyVersion>1.2.6</AssemblyVersion>
-	  <FileVersion>1.2.6</FileVersion>
-	  <Title>Jocys.com Ruuvi PRTG Server</Title>
-	  <Description>Forward data from RuuviTag beacon to PRTG Network Monitor Server</Description>
-	  <Product>Ruuvi PRTG Server</Product>
-	  <PackageProjectUrl>https://www.jocys.com</PackageProjectUrl>
-	  <RepositoryUrl>https://www.github.com/JocysCom/VsAiCompanion</RepositoryUrl>
-	  <RepositoryType>git</RepositoryType>
-
-
-
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>embedded</DebugType>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>App.ico</ApplicationIcon>
-    <PlatformTarget>x64</PlatformTarget>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceProcess" />
-    <Reference Include="Windows">
-      <HintPath>c:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0\Windows.winmd</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="JocysCom\Services\SimpleService\SimpleServiceBase.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="JocysCom\Services\SimpleService\SimpleServiceBase.Designer.cs">
-      <DependentUpon>SimpleServiceBase.cs</DependentUpon>
-    </Compile>
-    <Compile Update="JocysCom\Services\SimpleService\SimpleServiceInstaller.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="JocysCom\Services\SimpleService\SimpleServiceInstaller.Designer.cs">
-      <DependentUpon>SimpleServiceInstaller.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Update="_InstallService.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="_UnInstallService.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<IsWebBootstrapper>false</IsWebBootstrapper>
+		<PublishUrl>publish\</PublishUrl>
+		<Install>true</Install>
+		<InstallFrom>Disk</InstallFrom>
+		<UpdateEnabled>false</UpdateEnabled>
+		<UpdateMode>Foreground</UpdateMode>
+		<UpdateInterval>7</UpdateInterval>
+		<UpdateIntervalUnits>Days</UpdateIntervalUnits>
+		<UpdatePeriodically>false</UpdatePeriodically>
+		<UpdateRequired>false</UpdateRequired>
+		<MapFileExtensions>true</MapFileExtensions>
+		<ApplicationRevision>0</ApplicationRevision>
+		<ApplicationVersion>1.2.6</ApplicationVersion>
+		<UseApplicationTrust>false</UseApplicationTrust>
+		<BootstrapperEnabled>true</BootstrapperEnabled>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<Copyright>Jocys.com</Copyright>
+		<Company>Jocys.com</Company>
+		<Authors>Jocys.com Team</Authors>
+		<AssemblyVersion>1.2.6</AssemblyVersion>
+		<FileVersion>1.2.6</FileVersion>
+		<Title>Jocys.com Ruuvi PRTG Server</Title>
+		<Description>Forward data from RuuviTag beacon to PRTG Network Monitor Server</Description>
+		<Product>Ruuvi PRTG Server</Product>
+		<PackageProjectUrl>https://www.jocys.com</PackageProjectUrl>
+		<RepositoryUrl>https://www.github.com/JocysCom/VsAiCompanion</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugType>embedded</DebugType>
+	</PropertyGroup>
+	<PropertyGroup>
+		<ApplicationIcon>App.ico</ApplicationIcon>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Configuration.Install" />
+		<Reference Include="System.Net.Http" />
+		<Reference Include="System.ServiceModel" />
+		<Reference Include="System.ServiceProcess" />
+		<Reference Include="Windows">
+			<HintPath>c:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0\Windows.winmd</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="JocysCom\Services\SimpleService\SimpleServiceBase.cs">
+			<SubType>Component</SubType>
+		</Compile>
+		<Compile Update="JocysCom\Services\SimpleService\SimpleServiceBase.Designer.cs">
+			<DependentUpon>SimpleServiceBase.cs</DependentUpon>
+		</Compile>
+		<Compile Update="JocysCom\Services\SimpleService\SimpleServiceInstaller.cs">
+			<SubType>Component</SubType>
+		</Compile>
+		<Compile Update="JocysCom\Services\SimpleService\SimpleServiceInstaller.Designer.cs">
+			<DependentUpon>SimpleServiceInstaller.cs</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Settings.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+		<None Update="_InstallService.bat">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="_UnInstallService.bat">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="App.ico" />
+	</ItemGroup>
+	<ItemGroup>
+		<BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+			<Visible>False</Visible>
+			<ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+			<Install>true</Install>
+		</BootstrapperPackage>
+		<BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+			<Visible>False</Visible>
+			<ProductName>.NET Framework 3.5 SP1</ProductName>
+			<Install>false</Install>
+		</BootstrapperPackage>
+	</ItemGroup>
 </Project>
