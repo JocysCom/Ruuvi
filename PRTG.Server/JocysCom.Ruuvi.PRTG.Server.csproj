@@ -1,17 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB859C8C-A94B-4965-AC98-D0C55A25E731}</ProjectGuid>
+    <TargetFramework>net472</TargetFramework>
     <OutputType>Exe</OutputType>
-    <RootNamespace>JocysCom.Ruuvi.PRTG.Server</RootNamespace>
-    <AssemblyName>JocysCom.Ruuvi.PRTG.Server</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,101 +15,69 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+	  <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+	  <Copyright>Jocys.com</Copyright>
+	  <Company>Jocys.com</Company>
+	  <Authors>Jocys.com Team</Authors>
+	  <AssemblyVersion>1.2.6</AssemblyVersion>
+	  <FileVersion>1.2.6</FileVersion>
+	  <Title>Jocys.com Ruuvi PRTG Server</Title>
+	  <Description>Forward data from RuuviTag beacon to PRTG Network Monitor Server</Description>
+	  <Product>Ruuvi PRTG Server</Product>
+	  <PackageProjectUrl>https://www.jocys.com</PackageProjectUrl>
+	  <RepositoryUrl>https://www.github.com/JocysCom/VsAiCompanion</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+
+
+
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>embedded</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>App.ico</ApplicationIcon>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Runtime.WindowsRuntime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5\System.Runtime.WindowsRuntime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceProcess" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="Windows">
       <HintPath>c:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0\Windows.winmd</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\AppHelper.cs" />
-    <Compile Include="Common\PrtgData.cs" />
-    <Compile Include="Common\RuuviData.cs" />
-    <Compile Include="Common\RuuviPrtgService.cs" />
-    <Compile Include="JocysCom\Common\HiResDateTime.cs" />
-    <Compile Include="JocysCom\Configuration\AssemblyInfo.cs" />
-    <Compile Include="JocysCom\Configuration\AssemblyInfo.Ext1.cs" />
-    <Compile Include="JocysCom\Configuration\SettingsParser.cs" />
-    <Compile Include="JocysCom\IO\LogFileWriter.cs" />
-    <Compile Include="JocysCom\Runtime\LogHelper.cs" />
-    <Compile Include="JocysCom\Runtime\LogHelper.Exception.cs" />
-    <Compile Include="JocysCom\Runtime\LogHelper.File.cs" />
-    <Compile Include="JocysCom\Runtime\TraceFormat.cs" />
-    <Compile Include="JocysCom\Services\SimpleService\CtrlTypes.cs" />
-    <Compile Include="JocysCom\Services\SimpleService\ISimpleService.cs" />
-    <Compile Include="JocysCom\Services\SimpleService\SimpleServiceBase.cs">
+    <Compile Update="JocysCom\Services\SimpleService\SimpleServiceBase.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="JocysCom\Services\SimpleService\SimpleServiceBase.Designer.cs">
+    <Compile Update="JocysCom\Services\SimpleService\SimpleServiceBase.Designer.cs">
       <DependentUpon>SimpleServiceBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="JocysCom\Services\SimpleService\SimpleServiceHandler.cs" />
-    <Compile Include="JocysCom\Services\SimpleService\SimpleServiceInstaller.cs">
+    <Compile Update="JocysCom\Services\SimpleService\SimpleServiceInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="JocysCom\Services\SimpleService\SimpleServiceInstaller.Designer.cs">
+    <Compile Update="JocysCom\Services\SimpleService\SimpleServiceInstaller.Designer.cs">
       <DependentUpon>SimpleServiceInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="JocysCom\Text\Helper.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Properties\Settings.settings">
+    <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="_InstallService.bat">
+    <None Update="_InstallService.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="_UnInstallService.bat">
+    <None Update="_UnInstallService.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -137,5 +96,4 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

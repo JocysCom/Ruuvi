@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Runtime.Serialization.Json;
-using System.Security.Policy;
 using System.Text;
 
 namespace JocysCom.Ruuvi.PRTG.Server
@@ -21,7 +20,7 @@ namespace JocysCom.Ruuvi.PRTG.Server
 					{
 						 new result(nameof(RuuviData.Temperature), (float)data.Temperature, "°C", 2),
 						 new result(nameof(RuuviData.Humidity), (float)data.Humidity, "%", 2),
-						 new result(nameof(RuuviData.Pressure), (float)data.Pressure, "Pa"),
+						 new result(nameof(RuuviData.Pressure), (float)data.Pressure/100f, "hPa"),
 						 new result(nameof(RuuviData.AccelerationX), (float)data.AccelerationX, "m/s²"),
 						 new result(nameof(RuuviData.AccelerationY), (float)data.AccelerationY, "m/s²"),
 						 new result(nameof(RuuviData.AccelerationZ), (float)data.AccelerationZ, "m/s²"),
